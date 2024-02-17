@@ -4,6 +4,7 @@ local options = {
 
     "rust",
     "go",
+    "c_sharp",
 
     "html",
     "css",
@@ -11,6 +12,9 @@ local options = {
     "typescript",
     "tsx",
     "json",
+
+    "yaml",
+    "sql",
   },
 
   highlight = {
