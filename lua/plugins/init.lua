@@ -13,7 +13,8 @@ return {
       ensure_installed = {
         "lua-language-server",
         "rust-analyzer",
-        "gopls"
+        "gopls",
+        "pyright",
       },
     },
   },
@@ -37,6 +38,7 @@ return {
         "rust",
         "go",
         "c_sharp",
+        "python",
 
         "html",
         "css",
