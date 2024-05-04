@@ -13,7 +13,13 @@ return {
       ensure_installed = {
         "lua-language-server",
         "rust-analyzer",
+
+        -- go --
         "gopls",
+        "goimports",
+        "golines",
+
+        -- python --
         "pyright",
         "isort",
         "black",
