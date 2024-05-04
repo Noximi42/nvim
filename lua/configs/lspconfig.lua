@@ -34,6 +34,21 @@ lspconfig.gopls.setup {
   },
 }
 
+-- rust --
+lspconfig.rust_analyzer.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "rust" },
+  root_dir = util.root_pattern("Cargo. toml"),
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
+})
+
 -- pyhton --
 lspconfig.pyright.setup({
   on_attach = on_attach,
