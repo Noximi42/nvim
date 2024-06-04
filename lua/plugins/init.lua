@@ -11,6 +11,10 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        -- c++ --
+        "clangd",
+        "clang-format",
+
         "lua-language-server",
         "rust-analyzer",
 
@@ -18,6 +22,8 @@ return {
         "gopls",
         "goimports",
         "golines",
+
+        -- c# --
 
         -- python --
         "pyright",
@@ -45,6 +51,7 @@ return {
         "vim",
         "vimdoc",
 
+        "cpp",
         "rust",
         "go",
         "c_sharp",
