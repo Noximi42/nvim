@@ -72,3 +72,8 @@ lspconfig.tsserver.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+-- dart --
+lspconfig["dartls"].setup({
+  on_attach = on_attach,
+})

@@ -56,6 +56,7 @@ return {
         "go",
         "c_sharp",
         "python",
+        "dart",
 
         "html",
         "css",

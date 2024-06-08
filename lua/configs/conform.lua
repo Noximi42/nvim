@@ -4,6 +4,7 @@ local options = {
     cpp = { "clang-format" },
     rust = { "rustfmt" },
     go = { "goimports", "gofmt", "golines" },
+    dart = { "dart_format" },
     python = function(bufnr)
       if require("conform").get_formatter_info("ruff_format", bufnr).available then
         return { "ruff_format" }
