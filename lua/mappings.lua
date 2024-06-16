@@ -20,3 +20,6 @@ map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
+
+map("n", "<C-j>", "<C-e>", { remap = true })
+map("n", "<C-k>", "<C-y>", { remap = true })
