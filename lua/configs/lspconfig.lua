@@ -77,3 +77,10 @@ lspconfig.tsserver.setup {
 lspconfig["dartls"].setup({
   on_attach = on_attach,
 })
+
+-- Java ---
+lspconfig["jdtls"].setup({
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities= capabilities,
+})

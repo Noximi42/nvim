@@ -25,6 +25,10 @@ return {
 
         -- c# --
 
+
+        -- Java ---
+        "jdtls",
+
         -- python --
         "pyright",
         "isort",
@@ -55,6 +59,7 @@ return {
         "rust",
         "go",
         "c_sharp",
+        "java",
         "python",
         "dart",
 
