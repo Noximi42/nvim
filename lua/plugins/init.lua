@@ -13,13 +13,63 @@ return {
     end,
   },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        -- c++ --
+        "clangd",
+        "clang-format",
+
+        "lua-language-server",
+        "rust-analyzer",
+
+        -- go --
+        "gopls",
+        "goimports",
+        "golines",
+
+        -- c# --
+
+        -- Java ---
+        "jdtls",
+
+        -- python --
+        "pyright",
+        "isort",
+        "black",
+        "mypy",
+        "ruff",
+      },
+    },
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "lua",
+        "vim",
+        "vimdoc",
+
+        "cpp",
+        "rust",
+        "go",
+        "c_sharp",
+        "java",
+        "python",
+        "dart",
+
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+
+        "yaml",
+        "sql",
+      },
+    },
+  },
 }
