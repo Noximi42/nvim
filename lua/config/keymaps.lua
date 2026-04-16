@@ -5,6 +5,7 @@
 local map = vim.keymap.set
 
 map("i", "<C-c>", "<ESC>")
+map("n", "<C-c>", "<ESC>")
 map("n", "<C-c>", ":noh<CR>")
 
 map("n", "n", "nzzzv")
