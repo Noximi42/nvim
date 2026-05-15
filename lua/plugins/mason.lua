@@ -40,6 +40,7 @@ return {
         "vtsls",
         "svelte-language-server",
         "tailwindcss-language-server",
+        "astro-language-server",
         "prettier",
       },
       registries = {
