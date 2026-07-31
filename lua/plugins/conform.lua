@@ -9,6 +9,7 @@ return {
         typescriptreact = { "prettier" },
         astro = { "prettier" },
         svelte = { "prettier" },
+        vue = { "prettier" },
         cs = { "csharpier" },
       },
     },
