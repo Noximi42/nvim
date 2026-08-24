@@ -19,5 +19,40 @@ return {
         },
       },
     },
+    config = function(_, opts)
+      require("codediff").setup(opts)
+      -- disable smooth scrolling in codediff buffers
+      local touched = {}
+      local function in_codediff_tab()
+        for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+          local name = vim.api.nvim_buf_get_name(vim.api.nvim_win_get_buf(win))
+          if vim.fn.fnamemodify(name, ":t"):match("^CodeDiff ") then
+            return true
+          end
+        end
+        return false
+      end
+      vim.api.nvim_create_autocmd("BufWinEnter", {
+        callback = function(args)
+          vim.schedule(function()
+            if vim.api.nvim_buf_is_valid(args.buf) and in_codediff_tab() then
+              vim.b[args.buf].snacks_scroll = false
+              touched[args.buf] = true
+            end
+          end)
+        end,
+      })
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "CodeDiffClose",
+        callback = function()
+          for buf in pairs(touched) do
+            if vim.api.nvim_buf_is_valid(buf) then
+              vim.b[buf].snacks_scroll = nil
+            end
+          end
+          touched = {}
+        end,
+      })
+    end,
   },
 }
