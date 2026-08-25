@@ -10,6 +10,7 @@ return {
     opts = {
       picker = "snacks",
       enable_builtin = true,
+      users = "assignable", -- scope assignee/reviewer picker to people who can actually be assigned in this repo
     },
     keys = {
       { "<leader>gc", "<cmd>Octo pr create<cr>", desc = "Create GitHub PullRequest" },
