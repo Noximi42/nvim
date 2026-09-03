@@ -20,3 +20,9 @@ map("i", "<C-h>", "<Left>", { desc = "Move left" })
 map("i", "<C-l>", "<Right>", { desc = "Move right" })
 -- map("i", "<C-j>", "<Down>", { desc = "Move down" })
 -- map("i", "<C-k>", "<Up>", { noremap = true, desc = "Move up" }) -- not working since C-k is used by other command
+
+-- Floating terminal (<C-/>) always opens in the directory nvim was started
+-- in, not the focused buffer's project root (overrides LazyVim's default)
+local startup_cwd = vim.fn.getcwd()
+map({ "n", "t" }, "<c-/>", function() Snacks.terminal.focus(nil, { cwd = startup_cwd }) end, { desc = "Terminal (Startup Dir)" })
+map({ "n", "t" }, "<c-_>", function() Snacks.terminal.focus(nil, { cwd = startup_cwd }) end, { desc = "which_key_ignore" })
