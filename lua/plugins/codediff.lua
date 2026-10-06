@@ -6,6 +6,7 @@ return {
     cmd = "CodeDiff",
     keys = {
       { "<leader>gd", "<cmd>CodeDiff<cr>", desc = "Diff Explorer (working tree)" },
+      { "<leader>gf", "<cmd>CodeDiff history %<cr>", desc = "Git Current File History (CodeDiff)" },
     },
     opts = {
       explorer = {
@@ -14,6 +15,7 @@ return {
       },
       keymaps = {
         view = {
+          toggle_explorer = "<leader>e", -- match LazyVim's explorer toggle (frees <leader>b, drops focus_explorer)
           next_hunk = "<C-n>", -- easier than ]c on German keyboards (AltGr+8, c)
           prev_hunk = "<C-p>",
         },
