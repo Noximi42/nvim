@@ -15,6 +15,10 @@ map("n", "N", "Nzzzv")
 map("n", "<leader>o", "o<Esc>", { desc = "Add line below" })
 map("n", "<leader>O", "O<Esc>", { desc = "Add line above" })
 
+-- Swap p/P in visual mode: p keeps the register, P yanks the replaced text
+map("x", "p", "P", { desc = "Paste without yanking selection" })
+map("x", "P", "p", { desc = "Paste and yank selection" })
+
 -- Move cursor in insert mode with Ctrl + hjkl
 map("i", "<C-h>", "<Left>", { desc = "Move left" })
 map("i", "<C-l>", "<Right>", { desc = "Move right" })
