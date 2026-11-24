@@ -30,3 +30,6 @@ map("i", "<C-l>", "<Right>", { desc = "Move right" })
 local startup_cwd = vim.fn.getcwd()
 map({ "n", "t" }, "<c-/>", function() Snacks.terminal.focus(nil, { cwd = startup_cwd }) end, { desc = "Terminal (Startup Dir)" })
 map({ "n", "t" }, "<c-_>", function() Snacks.terminal.focus(nil, { cwd = startup_cwd }) end, { desc = "which_key_ignore" })
+-- German layout: "/" is Shift+7. Windows Terminal (kitty keyboard protocol, which
+-- nvim enables) sends Ctrl+Shift+7 as <C-S-7> instead of <C-_>
+map({ "n", "t" }, "<c-s-7>", function() Snacks.terminal.focus(nil, { cwd = startup_cwd }) end, { desc = "which_key_ignore" })
